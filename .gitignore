@@ -1,0 +1,39 @@
+# Secrets — never commit
+**/.env
+**/.env.local
+**/.env.*.local
+
+# Node / Next.js build artifacts
+ladli_behna_app/node_modules/
+ladli_behna_app/.next/
+ladli_behna_app/out/
+ladli_behna_app/build/
+ladli_behna_app/tsconfig.tsbuildinfo
+ladli_behna_app/*.tsbuildinfo
+ladli_behna_app/next-env.d.ts
+
+# Netlify local
+ladli_behna_app/.netlify/
+.netlify/
+
+# Python (agent provisioning scripts)
+.venv/
+__pycache__/
+*.pyc
+
+# Local scratch / generated files at app root
+ladli_behna_app/Generated Image*.png
+ladli_behna_app/Screenshot*.jpg
+ladli_behna_app/Screenshot*.png
+ladli_behna_app/*.mp3
+ladli_behna_app/*.wav
+ladli_behna_app/*.m4a
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*Zone.Identifier
+
+# Vercel
+.vercel

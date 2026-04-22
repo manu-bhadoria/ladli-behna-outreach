@@ -1,0 +1,219 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Rural MP / Malwa women palette — feminine, warm, festive.
+ * Inspired by:
+ *   - Marigold (गेंदा) + turmeric (हल्दी) — saffron family, auspicious
+ *   - Rose-pink sari (गुलाबी) — most common festive color in rural MP
+ *   - Deep sindoor / hibiscus red — bindi + mangal suchak
+ *   - Peacock teal (मोरपंखी) — the sari border contrast in the hero image
+ *   - Aged ivory / wheat cream background — village-light, not paper-white
+ *   - Gold accents — mangalsutra / bichua / bangles
+ * Softer than the cm-voice-bot's pure saffron. Prioritises warmth over authority.
+ */
+
+:root {
+  /* Backgrounds — warm ivory / cream with pink-wheat undertones */
+  --cream:          #fdf6ec;
+  --cream-soft:     #f9ead7;
+  --cream-deep:     #f2dabf;
+  --wheat:          #e9ceae;
+
+  /* Borders / lines — dusty rose-taupe */
+  --line:           #ecd9c6;
+  --line-strong:    #d9b99c;
+  --line-rose:      #e8c2c6;
+
+  /* Ink — warm brown, not gray */
+  --ink:            #2b1a10;
+  --ink-soft:       #5a3d2b;
+  --ink-muted:      #8a6a52;
+  --ink-dim:        #b39680;
+
+  /* Primary — rose/pink (the sari color) + marigold (the tika/festive) */
+  --rose:           #c14a5a;        /* deep rose — primary action */
+  --rose-hi:        #d66876;        /* lighter hover */
+  --rose-glow:      rgba(193, 74, 90, 0.28);
+  --rose-bg:        #faeaec;        /* very soft rose wash */
+
+  --marigold:       #e88a2f;        /* marigold / haldi — secondary warm */
+  --marigold-hi:    #f4a54e;
+  --marigold-glow:  rgba(232, 138, 47, 0.25);
+
+  /* Accent — peacock teal (sari border in the hero image) */
+  --teal:           #2a7a7f;
+  --teal-soft:      #5da5a8;
+
+  /* Gold — jewellery accents */
+  --gold:           #b88a2a;
+  --gold-soft:      #d4a94a;
+
+  /* Backward-compat alias — legacy utility classes still reference these */
+  --paper:          var(--cream);
+  --paper-soft:     var(--cream-soft);
+  --paper-deep:     var(--cream-deep);
+  --saffron:        var(--marigold);
+  --saffron-hi:     var(--marigold-hi);
+  --saffron-glow:   var(--marigold-glow);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family:
+    'Nirmala UI',
+    'Kohinoor Devanagari',
+    'Noto Sans Devanagari',
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection { background: var(--rose); color: #fff; }
+
+.hindi-serif {
+  font-family:
+    'Georgia', 'Nirmala UI', 'Kohinoor Devanagari', 'Noto Sans Devanagari', serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--rose);
+}
+
+/* Utility classes kept for backwards compat + new accent helpers */
+.text-saffron { color: var(--marigold); }
+.bg-saffron   { background-color: var(--marigold); }
+.border-saffron { border-color: var(--marigold); }
+.text-rose    { color: var(--rose); }
+.bg-rose      { background-color: var(--rose); }
+.border-rose  { border-color: var(--rose); }
+.text-teal    { color: var(--teal); }
+.bg-teal      { background-color: var(--teal); }
+.text-gold    { color: var(--gold); }
+
+/* Ambient backdrop — marigold top, rose bottom, teal whisper, cream base.
+   Feels like late-afternoon sun on a rural courtyard. */
+.backdrop-hero {
+  background:
+    radial-gradient(1100px 700px at 50% -8%, rgba(232, 138, 47, 0.22), transparent 60%),
+    radial-gradient(900px 700px at 85% 110%, rgba(193, 74, 90, 0.16), transparent 55%),
+    radial-gradient(700px 560px at 8% 95%, rgba(42, 122, 127, 0.08), transparent 55%),
+    radial-gradient(600px 500px at 50% 50%, rgba(255, 220, 180, 0.15), transparent 70%),
+    var(--cream);
+}
+
+/* Glow ring around speaker — rose now (primary), was saffron */
+@keyframes rose-ring {
+  0%   { transform: scale(1);    opacity: 0.55; }
+  100% { transform: scale(1.24); opacity: 0; }
+}
+.speaking-ring {
+  animation: rose-ring 1.5s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
+  border-color: var(--rose) !important;
+}
+
+@keyframes soft-pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.5; }
+}
+.soft-pulse { animation: soft-pulse 1.8s ease-in-out infinite; }
+
+@keyframes subtle-float {
+  0%, 100% { transform: translateY(0px); }
+  50%      { transform: translateY(-3px); }
+}
+.subtle-float { animation: subtle-float 4.5s ease-in-out infinite; }
+
+.nav-glass {
+  background: rgba(253, 246, 236, 0.82);
+  backdrop-filter: blur(14px) saturate(1.15);
+  -webkit-backdrop-filter: blur(14px) saturate(1.15);
+  border-bottom: 1px solid var(--line-rose);
+}
+
+/* Primary CTA — rose gradient, the sari color. Warm and inviting, not commanding. */
+.btn-saffron {
+  background: linear-gradient(180deg, #d66876 0%, #c14a5a 100%);
+  color: #fff;
+  box-shadow: 0 10px 26px -8px var(--rose-glow), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  transition: transform 120ms ease, box-shadow 120ms ease, filter 120ms ease;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.btn-saffron:hover:not(:disabled) {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+  box-shadow: 0 14px 32px -8px var(--rose-glow), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+.btn-saffron:active:not(:disabled) {
+  transform: translateY(0);
+  filter: brightness(0.96);
+}
+.btn-saffron:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* Alias — new semantic button class */
+.btn-rose { /* same as btn-saffron for now — kept explicit for new code */
+  background: linear-gradient(180deg, #d66876 0%, #c14a5a 100%);
+  color: #fff;
+  box-shadow: 0 10px 26px -8px var(--rose-glow), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  transition: transform 120ms ease, box-shadow 120ms ease, filter 120ms ease;
+}
+
+.btn-marigold {
+  background: linear-gradient(180deg, #f4a54e 0%, #e88a2f 100%);
+  color: #fff;
+  box-shadow: 0 10px 24px -8px var(--marigold-glow), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.btn-ghost {
+  background: rgba(255, 250, 240, 0.7);
+  color: var(--ink-soft);
+  border: 1px solid var(--line-strong);
+  transition: color 120ms ease, border-color 120ms ease, background 120ms ease;
+}
+.btn-ghost:hover {
+  color: var(--rose);
+  border-color: var(--rose);
+  background: rgba(255, 250, 240, 0.95);
+}
+
+.btn-danger {
+  background: #a8303f;
+  color: #fff;
+  transition: background 120ms ease, transform 120ms ease;
+}
+.btn-danger:hover { background: #c14a5a; }
+.btn-danger:active { transform: translateY(1px); }
+
+.surface-card {
+  background: #fffaf0;
+  border: 1px solid var(--line-rose);
+  box-shadow: 0 1px 0 rgba(120, 60, 50, 0.03);
+}
+.surface-row-alt { background: var(--rose-bg); }
+.surface-row-hover:hover { background: var(--cream-deep); }
+
+.kicker {
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: var(--rose);
+  font-weight: 700;
+}
+
+/* Portrait frame — rose border by default, marigold when live */
+.portrait-frame {
+  border: 2px solid var(--rose);
+  box-shadow: 0 0 50px -10px var(--rose-glow);
+}
+.portrait-frame-live {
+  border: 2px solid var(--marigold);
+  box-shadow: 0 0 60px -10px var(--marigold-glow);
+}
+
+@media (max-width: 768px) {
+  body { -webkit-tap-highlight-color: transparent; }
+}

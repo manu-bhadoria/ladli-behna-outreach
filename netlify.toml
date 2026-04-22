@@ -1,0 +1,27 @@
+# Netlify build config for the Ladli Behna Outreach voice agent.
+# The Next.js app lives in ladli_behna_app/, not at repo root.
+
+[build]
+  base    = "ladli_behna_app"
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Environment variables are set via `netlify env:set` or the Netlify UI —
+# never committed. Required values:
+#   VOICE_AGENT_ID       = agent_... (from setup_agent.py output)
+#   VOICE_API_KEY        = sk_... (ElevenLabs API key, treat as secret)
+#   BASIC_AUTH_PASSWORD  = "" (optional — gate the whole site behind basic auth)
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options        = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy        = "strict-origin-when-cross-origin"
+    Permissions-Policy     = "microphone=(self)"

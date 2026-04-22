@@ -66,9 +66,21 @@ export type ConversationDetail = {
   transcript: Turn[];
 };
 
-function getAuth() {
-  const apiKey = process.env.VOICE_API_KEY;
-  const agentId = process.env.VOICE_AGENT_ID;
+// On Cloudflare Pages + next-on-pages, env vars live on the request
+// context, not on process.env. Fall back to process.env for local dev.
+async function getAuth() {
+  let apiKey: string | undefined;
+  let agentId: string | undefined;
+  try {
+    // @ts-expect-error — optional dependency, only present on CF Pages build
+    const { getRequestContext } = await import("@cloudflare/next-on-pages");
+    const { env } = getRequestContext();
+    apiKey = env.VOICE_API_KEY;
+    agentId = env.VOICE_AGENT_ID;
+  } catch {
+    apiKey = process.env.VOICE_API_KEY;
+    agentId = process.env.VOICE_AGENT_ID;
+  }
   if (!apiKey || !agentId) {
     throw new Error("VOICE_API_KEY or VOICE_AGENT_ID not set");
   }
@@ -76,7 +88,7 @@ function getAuth() {
 }
 
 export async function listConversations(pageSize = 50): Promise<ConversationSummary[]> {
-  const { apiKey, agentId } = getAuth();
+  const { apiKey, agentId } = await getAuth();
   const res = await fetch(
     `${EL_BASE}/v1/convai/conversations?agent_id=${agentId}&page_size=${pageSize}`,
     { headers: { "xi-api-key": apiKey }, cache: "no-store" }
@@ -87,7 +99,7 @@ export async function listConversations(pageSize = 50): Promise<ConversationSumm
 }
 
 export async function getConversation(id: string): Promise<ConversationDetail> {
-  const { apiKey } = getAuth();
+  const { apiKey } = await getAuth();
   const res = await fetch(`${EL_BASE}/v1/convai/conversations/${id}`, {
     headers: { "xi-api-key": apiKey },
     cache: "no-store",

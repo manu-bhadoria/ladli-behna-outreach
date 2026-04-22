@@ -158,3 +158,11 @@ Every successful `update_agent.py` run appends one entry below with timestamp, m
 - patches: `prompt+first_message+max_tokens+llm`, `turn_config`, `tts_config`, `knowledge_base+rag`
 - pre-snapshot: `prompt_versions/2026-04-22T104604Z_pre-update.md`
 - post-snapshot: `prompt_versions/2026-04-22T104616Z_post-update.md`
+
+### 2026-04-22 · pronunciation dictionary (laadli retroflex /ɽ/)
+- script: `create_pronunciation_dict.py` (one-shot)
+- patches: `tts.pronunciation_dictionary_locators`
+- dictionary_id: `LHXBo1zDDZQ0QAVmklo1` (name: `ladli-behna-laadli-fix-v1`, version `8ZPwDmTLTKBqMQwwUAMH`)
+- rules: 10 IPA phoneme rules covering लाड़ली / लाडली / लाड़्ली / "लाड़ली बहना" + Latin variants (laadli, ladli, Ladli, Laadli, "Ladli Behna", "Laadli Behna") all mapped to `laːɽliː` (+ ` bɛɦnaː` for the phrase variants)
+- endpoint: `/v1/pronunciation-dictionaries/add-from-rules` (`add-from-file` rejected PLS XML with `Lexicon file formatted incorrectly`)
+- metadata saved: `docs/pronunciation_dict_ladli.json`

@@ -1,0 +1,43 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+concurrency:
+  group: cloudflare-pages-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: ladli_behna_app/package-lock.json
+
+      - name: Install deps
+        working-directory: ladli_behna_app
+        run: npm ci --prefer-offline --no-audit
+
+      # next-on-pages adapts the Next.js build into Cloudflare Pages'
+      # worker/static layout. Writes to ladli_behna_app/.vercel/output/static.
+      - name: Build with next-on-pages
+        working-directory: ladli_behna_app
+        run: npx --yes @cloudflare/next-on-pages@1
+        env:
+          SKIP_BUILD_FAILURE_ON_WARNINGS: 'true'
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy ladli_behna_app/.vercel/output/static --project-name=ladli-behna-outreach --branch=main --commit-dirty=true

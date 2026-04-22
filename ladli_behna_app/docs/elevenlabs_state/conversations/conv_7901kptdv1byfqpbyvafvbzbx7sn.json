@@ -1,0 +1,597 @@
+{
+  "agent_id": "agent_9901kpt6a6xqf3gaahtr44ycvqgc",
+  "agent_name": "Ladli Behna Outreach — CM Mohan Yadav (Hindi)",
+  "status": "done",
+  "user_id": null,
+  "branch_id": null,
+  "version_id": null,
+  "metadata": {
+    "start_time_unix_secs": 1776855912,
+    "accepted_time_unix_secs": 1776855912,
+    "call_duration_secs": 73,
+    "cost": 491,
+    "deletion_settings": {
+      "deletion_time_unix_secs": null,
+      "deleted_logs_at_time_unix_secs": null,
+      "deleted_audio_at_time_unix_secs": null,
+      "deleted_transcript_at_time_unix_secs": null,
+      "delete_transcript_and_pii": false,
+      "delete_audio": false
+    },
+    "feedback": {
+      "type": null,
+      "overall_score": null,
+      "likes": 0,
+      "dislikes": 0,
+      "rating": null,
+      "comment": null
+    },
+    "authorization_method": "public",
+    "charging": {
+      "dev_discount": false,
+      "is_burst": false,
+      "tier": "creator",
+      "llm_usage": {
+        "irreversible_generation": {
+          "model_usage": {
+            "gemini-2.5-flash": {
+              "input": {
+                "tokens": 3762,
+                "price": 0.0005643
+              },
+              "input_cache_read": {
+                "tokens": 4021,
+                "price": 0.0
+              },
+              "input_cache_write": {
+                "tokens": 0,
+                "price": 0.0
+              },
+              "output_total": {
+                "tokens": 113,
+                "price": 6.78e-05
+              }
+            }
+          }
+        },
+        "initiated_generation": {
+          "model_usage": {
+            "gemini-2.5-flash": {
+              "input": {
+                "tokens": 13228,
+                "price": 0.0019842
+              },
+              "input_cache_read": {
+                "tokens": 6028,
+                "price": 0.0
+              },
+              "input_cache_write": {
+                "tokens": 0,
+                "price": 0.0
+              },
+              "output_total": {
+                "tokens": 176,
+                "price": 0.00010559999999999999
+              }
+            }
+          }
+        }
+      },
+      "llm_price": 0.0020898,
+      "llm_charge": 9,
+      "call_charge": 482,
+      "free_minutes_consumed": 0.0,
+      "free_llm_dollars_consumed": 0.0
+    },
+    "phone_call": null,
+    "batch_call": null,
+    "termination_reason": "Client disconnected: 1000",
+    "error": null,
+    "warnings": [],
+    "main_language": "hi",
+    "rag_usage": {
+      "usage_count": 3,
+      "embedding_model": "e5_mistral_7b_instruct"
+    },
+    "text_only": false,
+    "features_usage": {
+      "language_detection": {
+        "enabled": false,
+        "used": false
+      },
+      "transfer_to_agent": {
+        "enabled": false,
+        "used": false
+      },
+      "transfer_to_number": {
+        "enabled": false,
+        "used": false
+      },
+      "multivoice": {
+        "enabled": false,
+        "used": false
+      },
+      "dtmf_tones": {
+        "enabled": false,
+        "used": false
+      },
+      "external_mcp_servers": {
+        "enabled": false,
+        "used": false
+      },
+      "pii_zrm_workspace": false,
+      "pii_zrm_agent": false,
+      "tool_dynamic_variable_updates": {
+        "enabled": false,
+        "used": false
+      },
+      "is_livekit": true,
+      "voicemail_detection": {
+        "enabled": false,
+        "used": false
+      },
+      "dtmf_input": {
+        "enabled": false,
+        "used": false
+      },
+      "workflow": {
+        "enabled": false,
+        "tool_node": {
+          "enabled": false,
+          "used": false
+        },
+        "standalone_agent_node": {
+          "enabled": false,
+          "used": false
+        },
+        "phone_number_node": {
+          "enabled": false,
+          "used": false
+        },
+        "end_node": {
+          "enabled": false,
+          "used": false
+        }
+      },
+      "agent_testing": {
+        "enabled": false,
+        "tests_ran_after_last_modification": false,
+        "tests_ran_in_last_7_days": false
+      },
+      "versioning": {
+        "enabled": false,
+        "used": false
+      },
+      "file_input": {
+        "enabled": true,
+        "used": false
+      }
+    },
+    "eleven_assistant": {
+      "is_eleven_assistant": false
+    },
+    "initiator_id": null,
+    "conversation_initiation_source": "react_sdk",
+    "conversation_initiation_source_version": "1.1.1",
+    "timezone": null,
+    "async_metadata": null,
+    "whatsapp": null,
+    "agent_created_from": "api",
+    "agent_last_updated_from": "ui"
+  },
+  "analysis": {
+    "evaluation_criteria_results": {},
+    "data_collection_results": {},
+    "evaluation_criteria_results_list": [],
+    "data_collection_results_list": [],
+    "call_successful": "success",
+    "transcript_summary": "The agent, impersonating CM Mohan Yadav, initiated a call to a beneficiary of the Laadli Behna Yojana. The user confirmed receiving funds and identified herself as a daily wage laborer. She requested an increase in the scheme's amount to ₹3,000. The agent acknowledged this, stating the government aims to reach this amount by 2028, and promised to relay the feedback to his office.",
+    "call_summary_title": "Laadli Behna Payment Increase",
+    "scoped": []
+  },
+  "visited_agents": [
+    {
+      "agent_id": "agent_9901kpt6a6xqf3gaahtr44ycvqgc",
+      "branch_id": null
+    }
+  ],
+  "conversation_initiation_client_data": {
+    "conversation_config_override": {
+      "turn": null,
+      "tts": {
+        "voice_id": null,
+        "stability": null,
+        "speed": null,
+        "similarity_boost": null
+      },
+      "conversation": {
+        "text_only": null
+      },
+      "agent": {
+        "first_message": null,
+        "language": null,
+        "max_conversation_duration_message": null,
+        "prompt": null
+      }
+    },
+    "custom_llm_extra_body": {},
+    "user_id": null,
+    "source_info": {
+      "source": "react_sdk",
+      "version": "1.1.1"
+    },
+    "branch_id": null,
+    "environment": null,
+    "starting_workflow_node_id": null,
+    "dynamic_variables": {
+      "system__agent_id": "agent_9901kpt6a6xqf3gaahtr44ycvqgc",
+      "system__agent_turns": 4,
+      "system__current_agent_turns": 4,
+      "system__current_subagent_turns": 4,
+      "system__current_agent_id": "agent_9901kpt6a6xqf3gaahtr44ycvqgc",
+      "system__conversation_id": "conv_7901kptdv1byfqpbyvafvbzbx7sn",
+      "system__call_duration_secs": 72,
+      "system__time_utc": "2026-04-22T11:06:25.134189+00:00",
+      "system__time": "Wednesday, 11:06 22 April 2026",
+      "system__timezone": null,
+      "system__is_text_only": false,
+      "system__caller_id": null,
+      "system__called_number": null,
+      "system__call_sid": null,
+      "system__conversation_history": "{\"x-elevenlabs-history\": true, \"entries\": [{\"role\": \"agent\", \"message\": \"\\u0928\\u092e\\u0938\\u094d\\u0924\\u0947 \\u092c\\u0939\\u0928\\u093e\\u0964 \\u092e\\u0948\\u0902 \\u092e\\u094b\\u0939\\u0928 \\u092f\\u093e\\u0926\\u0935 \\u092c\\u094b\\u0932 \\u0930\\u0939\\u093e \\u0939\\u0942\\u0902 \\u2014 \\u0906\\u092a\\u0915\\u093e \\u092d\\u093e\\u0908, \\u092e\\u0927\\u094d\\u092f \\u092a\\u094d\\u0930\\u0926\\u0947\\u0936 \\u0915\\u093e \\u092e\\u0941\\u0916\\u094d\\u092f\\u092e\\u0902\\u0924\\u094d\\u0930\\u0940\\u0964 \\u0906\\u091c \\u0906\\u092a\\u0938\\u0947 \\u0915\\u0941\\u091b \\u092c\\u093e\\u0924 \\u0915\\u0930\\u0928\\u0940 \\u0925\\u0940 \\u2014 laadli \\u092c\\u0939\\u0928\\u093e \\u092f\\u094b\\u091c\\u0928\\u093e \\u0915\\u0947 \\u092c\\u093e\\u0930\\u0947 \\u092e\\u0947\\u0902\\u0964 \\u092a\\u0939\\u0932\\u0947 \\u092f\\u0939 \\u092c\\u0924\\u093e\\u0907\\u090f \\u2014 \\u092a\\u0948\\u0938\\u093e \\u0906\\u092a\\u0915\\u0947 \\u0905\\u092a\\u0928\\u0947 \\u0916\\u093e\\u0924\\u0947 \\u092e\\u0947\\u0902 \\u0920\\u0940\\u0915 \\u0938\\u0947 \\u0906 \\u0930\\u0939\\u093e \\u0939\\u0948?\"}, {\"role\": \"user\", \"message\": \"\\u0939\\u092e\\u094d\\u092e, \\u091c\\u0940 \\u0906 \\u0930\\u0939\\u093e \\u0939\\u0948\\u0964\\u0920\\u0940\\u0915 \\u0939\\u0948\\u0964\"}, {\"role\": \"agent\", \"message\": \"\\u092c\\u0939\\u0941\\u0924 \\u0905\\u091a\\u094d\\u091b\\u093e, \\u092c\\u0939\\u0928\\u093e\\u0964 \\u092f\\u0939 \\u091c\\u093e\\u0928\\u0915\\u0930 \\u092e\\u0941\\u091d\\u0947 \\u0916\\u0941\\u0936\\u0940 \\u0939\\u0941\\u0908\\u0964 \\u0905\\u091a\\u094d\\u091b\\u093e, \\u092f\\u0939 \\u092c\\u0924\\u093e\\u0907\\u090f \\u0915\\u093f \\u0906\\u092a \\u0915\\u094d\\u092f\\u093e \\u0915\\u093e\\u092e \\u0915\\u0930\\u0924\\u0940 \\u0939\\u0948\\u0902?\"}, {\"role\": \"user\", \"message\": \"\\u092e\\u0948\\u0902 \\u0926\\u0947\\u0939\\u093e\\u0921\\u093c\\u0940 \\u092e\\u091c\\u0926\\u0942\\u0930 \\u0939\\u0942\\u0901\\u0964\\u0926\\u093f\\u0928 \\u092d\\u0930 \\u092e\\u0947\\u0939\\u0928\\u0924 \\u0915\\u0930\\u0924\\u0940 \\u0939\\u0942\\u0901 \\u0914\\u0930 \\u092c\\u091a\\u094d\\u091a\\u094b\\u0902 \\u0915\\u093e \\u092a\\u0947\\u091f \\u092a\\u093e\\u0932\\u0924\\u0940 \\u0939\\u0942\\u0901\\u0964\"}, {\"role\": \"agent\", \"message\": \"\\u0906\\u092a \\u092c\\u0939\\u0941\\u0924 \\u092e\\u0947\\u0939\\u0928\\u0924 \\u0915\\u093e \\u0915\\u093e\\u092e \\u0915\\u0930\\u0924\\u0940 \\u0939\\u0948\\u0902, \\u092c\\u0939\\u0928\\u093e\\u0964 \\u0906\\u092a \\u091c\\u0948\\u0938\\u0940 \\u092c\\u0939\\u0928\\u0947\\u0902 \\u0939\\u0940 \\u092a\\u094d\\u0930\\u0926\\u0947\\u0936 \\u0915\\u0940 \\u0930\\u0940\\u0922\\u093c \\u0939\\u0948\\u0902\\u0964 \\u0905\\u091a\\u094d\\u091b\\u093e, \\u0915\\u094b\\u0908 \\u092c\\u093e\\u0924 \\u091c\\u094b \\u0906\\u092a \\u0938\\u0930\\u0915\\u093e\\u0930 \\u0915\\u094b \\u092c\\u0924\\u093e\\u0928\\u093e \\u091a\\u093e\\u0939\\u0947\\u0902?\"}, {\"role\": \"user\", \"message\": \"\\u0905, \\u091c\\u0940, \\u0905\\u0917\\u0930...3,000 \\u0939\\u094b \\u091c\\u093e\\u090f total \\u0930\\u093e\\u0936\\u093f, \\u0924\\u094b \\u092c\\u0939\\u0941\\u0924 \\u092e\\u091c\\u093c\\u093e \\u0906 \\u091c\\u093e\\u090f\\u0917\\u093e\\u0964\"}, {\"role\": \"agent\", \"message\": \"\\u092c\\u0939\\u0928\\u093e, \\u092e\\u0948\\u0902 \\u0906\\u092a\\u0915\\u0940 \\u092c\\u093e\\u0924 \\u0938\\u092e\\u091d \\u0930\\u0939\\u093e \\u0939\\u0942\\u0901\\u0964 \\u0939\\u092e\\u093e\\u0930\\u0940 \\u0938\\u0930\\u0915\\u093e\\u0930 \\u0915\\u093e \\u0932\\u0915\\u094d\\u0937\\u094d\\u092f \\u0939\\u0948 \\u0915\\u093f \\u0926\\u094b \\u0939\\u091c\\u093c\\u093e\\u0930 \\u0905\\u091f\\u094d\\u0920\\u093e\\u0908\\u0938 \\u0924\\u0915 \\u092f\\u0939 \\u0930\\u093e\\u0936\\u093f \\u0924\\u0940\\u0928 \\u0939\\u091c\\u093c\\u093e\\u0930 \\u0930\\u0941\\u092a\\u092f\\u0947 \\u0924\\u0915 \\u092a\\u0939\\u0941\\u0902\\u091a\\u0947\\u0964 \\u0906\\u092a\\u0915\\u0940 \\u092f\\u0939 \\u092c\\u093e\\u0924 \\u092e\\u0948\\u0902 \\u0905\\u092a\\u0928\\u0947 \\u0915\\u093e\\u0930\\u094d\\u092f\\u093e\\u0932\\u092f \\u092e\\u0947\\u0902 \\u0932\\u0947\\u0915\\u0930 \\u091c\\u093e\\u090a\\u0902\\u0917\\u093e\\u0964 \\u092c\\u093e\\u092c\\u093e \\u092e\\u0939\\u093e\\u0915\\u093e\\u0932 \\u0915\\u0940 \\u0915\\u0943\\u092a\\u093e \\u0906\\u092a \\u092a\\u0930 \\u092c\\u0928\\u0940 \\u0930\\u0939\\u0947\\u0964 \\u0927\\u0928\\u094d\\u092f\\u0935\\u093e\\u0926 \\u092c\\u0939\\u0928\\u093e\\u0964\"}]}"
+    },
+    "tool_mock_config": {
+      "mocking_strategy": "none",
+      "fallback_strategy": "raise_error",
+      "mocked_tool_names": []
+    }
+  },
+  "environment": "production",
+  "hiding_reason": null,
+  "conversation_id": "conv_7901kptdv1byfqpbyvafvbzbx7sn",
+  "has_audio": true,
+  "has_user_audio": true,
+  "has_response_audio": true,
+  "transcript": [
+    {
+      "role": "agent",
+      "agent_metadata": {
+        "agent_id": "agent_9901kpt6a6xqf3gaahtr44ycvqgc",
+        "branch_id": null,
+        "workflow_node_id": null,
+        "version_id": null
+      },
+      "message": "नमस्ते बहना। मैं मोहन यादव बोल रहा हूं — आपका भाई, मध्य प्रदेश का मुख्यमंत्री। आज आपसे कुछ बात करनी थी — laadli बहना योजना के बारे में। पहले यह बताइए — पैसा आपके अपने खाते में ठीक से आ रहा है?",
+      "multivoice_message": null,
+      "tool_calls": [],
+      "tool_results": [],
+      "feedback": null,
+      "llm_override": null,
+      "time_in_call_secs": 0,
+      "conversation_turn_metrics": {
+        "metrics": {
+          "convai_tts_service_ttfb": {
+            "elapsed_time": 0.657577941999989
+          }
+        },
+        "convai_asr_provider": null,
+        "convai_tts_model": "eleven_multilingual_v2",
+        "convai_tts_cascade": null
+      },
+      "rag_retrieval_info": null,
+      "llm_usage": null,
+      "interrupted": false,
+      "original_message": null,
+      "source_medium": null,
+      "source_event_id": 1,
+      "file_input": null
+    },
+    {
+      "role": "user",
+      "agent_metadata": null,
+      "message": "हम्म, जी आ रहा है।ठीक है।",
+      "multivoice_message": null,
+      "tool_calls": [],
+      "tool_results": [],
+      "feedback": null,
+      "llm_override": null,
+      "time_in_call_secs": 15,
+      "conversation_turn_metrics": {
+        "metrics": {
+          "convai_asr_trailing_service_latency": {
+            "elapsed_time": 0.0994694679998247
+          }
+        },
+        "convai_asr_provider": "Scribe v2.2 Realtime",
+        "convai_tts_model": null,
+        "convai_tts_cascade": null
+      },
+      "rag_retrieval_info": null,
+      "llm_usage": null,
+      "interrupted": false,
+      "original_message": null,
+      "source_medium": "audio",
+      "source_event_id": 67,
+      "file_input": null
+    },
+    {
+      "role": "agent",
+      "agent_metadata": {
+        "agent_id": "agent_9901kpt6a6xqf3gaahtr44ycvqgc",
+        "branch_id": null,
+        "workflow_node_id": null,
+        "version_id": null
+      },
+      "message": "बहुत अच्छा, बहना। यह जानकर मुझे खुशी हुई। अच्छा, यह बताइए कि आप क्या काम करती हैं?",
+      "multivoice_message": null,
+      "tool_calls": [],
+      "tool_results": [],
+      "feedback": null,
+      "llm_override": null,
+      "time_in_call_secs": 19,
+      "conversation_turn_metrics": {
+        "metrics": {
+          "convai_llm_service_ttf_sentence": {
+            "elapsed_time": 1.2141672339998877
+          },
+          "convai_llm_service_ttfb": {
+            "elapsed_time": 1.2136937830000534
+          },
+          "convai_llm_service_tt_last_sentence": {
+            "elapsed_time": 1.2672784680003133
+          },
+          "convai_tts_service_ttfb": {
+            "elapsed_time": 0.3349460449999242
+          }
+        },
+        "convai_asr_provider": null,
+        "convai_tts_model": "eleven_multilingual_v2",
+        "convai_tts_cascade": null
+      },
+      "rag_retrieval_info": {
+        "chunks": [],
+        "embedding_model": "e5_mistral_7b_instruct",
+        "retrieval_query": "मुख्यमंत्री लाडली बहना योजना के तहत आपके खाते में पैसे आ रहे हैं, क्या यह सही है?",
+        "rag_latency_secs": 0.47850321700025233
+      },
+      "llm_usage": {
+        "model_usage": {
+          "gemini-2.5-flash": {
+            "input": {
+              "tokens": 2547,
+              "price": 0.00038205
+            },
+            "input_cache_read": {
+              "tokens": 0,
+              "price": 0.0
+            },
+            "input_cache_write": {
+              "tokens": 0,
+              "price": 0.0
+            },
+            "output_total": {
+              "tokens": 23,
+              "price": 1.3799999999999998e-05
+            }
+          }
+        }
+      },
+      "interrupted": false,
+      "original_message": null,
+      "source_medium": null,
+      "source_event_id": 67,
+      "file_input": null
+    },
+    {
+      "role": "user",
+      "agent_metadata": null,
+      "message": "मैं देहाड़ी मजदूर हूँ।दिन भर मेहनत करती हूँ और बच्चों का पेट पालती हूँ।",
+      "multivoice_message": null,
+      "tool_calls": [],
+      "tool_results": [],
+      "feedback": null,
+      "llm_override": null,
+      "time_in_call_secs": 26,
+      "conversation_turn_metrics": {
+        "metrics": {
+          "convai_asr_trailing_service_latency": {
+            "elapsed_time": 0.05071606100000281
+          }
+        },
+        "convai_asr_provider": "Scribe v2.2 Realtime",
+        "convai_tts_model": null,
+        "convai_tts_cascade": null
+      },
+      "rag_retrieval_info": null,
+      "llm_usage": null,
+      "interrupted": false,
+      "original_message": null,
+      "source_medium": "audio",
+      "source_event_id": 127,
+      "file_input": null
+    },
+    {
+      "role": "agent",
+      "agent_metadata": {
+        "agent_id": "agent_9901kpt6a6xqf3gaahtr44ycvqgc",
+        "branch_id": null,
+        "workflow_node_id": null,
+        "version_id": null
+      },
+      "message": "आप बहुत मेहनत का काम करती हैं, बहना। आप जैसी बहनें ही प्रदेश की रीढ़ हैं। अच्छा, कोई बात जो आप सरकार को बताना चाहें?",
+      "multivoice_message": null,
+      "tool_calls": [],
+      "tool_results": [],
+      "feedback": null,
+      "llm_override": null,
+      "time_in_call_secs": 35,
+      "conversation_turn_metrics": {
+        "metrics": {
+          "convai_llm_service_ttf_sentence": {
+            "elapsed_time": 2.3860083780000423
+          },
+          "convai_llm_service_ttfb": {
+            "elapsed_time": 2.3854983599999287
+          },
+          "convai_llm_service_tt_last_sentence": {
+            "elapsed_time": 2.4293272780000734
+          },
+          "convai_tts_service_ttfb": {
+            "elapsed_time": 0.31339398399995844
+          }
+        },
+        "convai_asr_provider": null,
+        "convai_tts_model": "eleven_multilingual_v2",
+        "convai_tts_cascade": null
+      },
+      "rag_retrieval_info": {
+        "chunks": [],
+        "embedding_model": "e5_mistral_7b_instruct",
+        "retrieval_query": "क्या लाडली बहना योजना का पैसा आपके खाते में ठीक से आ रहा है, और आप देहाड़ी मजदूर हैं?",
+        "rag_latency_secs": 0.48755092700002933
+      },
+      "llm_usage": {
+        "model_usage": {
+          "gemini-2.5-flash": {
+            "input": {
+              "tokens": 576,
+              "price": 8.639999999999999e-05
+            },
+            "input_cache_read": {
+              "tokens": 2014,
+              "price": 0.0
+            },
+            "input_cache_write": {
+              "tokens": 0,
+              "price": 0.0
+            },
+            "output_total": {
+              "tokens": 33,
+              "price": 1.98e-05
+            }
+          }
+        }
+      },
+      "interrupted": false,
+      "original_message": null,
+      "source_medium": null,
+      "source_event_id": 127,
+      "file_input": null
+    },
+    {
+      "role": "user",
+      "agent_metadata": null,
+      "message": "अ, जी, अगर...3,000 हो जाए total राशि, तो बहुत मज़ा आ जाएगा।",
+      "multivoice_message": null,
+      "tool_calls": [],
+      "tool_results": [],
+      "feedback": null,
+      "llm_override": null,
+      "time_in_call_secs": 44,
+      "conversation_turn_metrics": {
+        "metrics": {
+          "convai_asr_trailing_service_latency": {
+            "elapsed_time": 0.09505253599991192
+          }
+        },
+        "convai_asr_provider": "Scribe v2.2 Realtime",
+        "convai_tts_model": null,
+        "convai_tts_cascade": null
+      },
+      "rag_retrieval_info": null,
+      "llm_usage": null,
+      "interrupted": false,
+      "original_message": null,
+      "source_medium": "audio",
+      "source_event_id": 200,
+      "file_input": null
+    },
+    {
+      "role": "agent",
+      "agent_metadata": {
+        "agent_id": "agent_9901kpt6a6xqf3gaahtr44ycvqgc",
+        "branch_id": null,
+        "workflow_node_id": null,
+        "version_id": null
+      },
+      "message": "बहना, मैं आपकी बात समझ रहा हूँ। हमारी सरकार का लक्ष्य है कि दो हज़ार अट्ठाईस तक यह राशि तीन हज़ार रुपये तक पहुंचे। आपकी यह बात मैं अपने कार्यालय में लेकर जाऊंगा। बाबा महाकाल की कृपा आप पर बनी रहे। धन्यवाद बहना।",
+      "multivoice_message": null,
+      "tool_calls": [],
+      "tool_results": [],
+      "feedback": null,
+      "llm_override": null,
+      "time_in_call_secs": 54,
+      "conversation_turn_metrics": {
+        "metrics": {
+          "convai_llm_service_ttf_sentence": {
+            "elapsed_time": 2.186567296999783
+          },
+          "convai_llm_service_ttfb": {
+            "elapsed_time": 2.186072935000084
+          },
+          "convai_llm_service_tt_last_sentence": {
+            "elapsed_time": 2.4058098629998312
+          },
+          "convai_tts_service_ttfb": {
+            "elapsed_time": 0.2840435869998146
+          }
+        },
+        "convai_asr_provider": null,
+        "convai_tts_model": "eleven_multilingual_v2",
+        "convai_tts_cascade": null
+      },
+      "rag_retrieval_info": {
+        "chunks": [],
+        "embedding_model": "e5_mistral_7b_instruct",
+        "retrieval_query": "क्या आप लाडली बहना योजना से मिलने वाली राशि को ₹3,000 प्रति माह करने का सुझाव दे रही हैं?\n",
+        "rag_latency_secs": 0.6058783139997104
+      },
+      "llm_usage": {
+        "model_usage": {
+          "gemini-2.5-flash": {
+            "input": {
+              "tokens": 639,
+              "price": 9.585e-05
+            },
+            "input_cache_read": {
+              "tokens": 2007,
+              "price": 0.0
+            },
+            "input_cache_write": {
+              "tokens": 0,
+              "price": 0.0
+            },
+            "output_total": {
+              "tokens": 57,
+              "price": 3.42e-05
+            }
+          }
+        }
+      },
+      "interrupted": false,
+      "original_message": null,
+      "source_medium": null,
+      "source_event_id": 200,
+      "file_input": null
+    },
+    {
+      "role": "user",
+      "agent_metadata": null,
+      "message": "नमस्ते।",
+      "multivoice_message": null,
+      "tool_calls": [],
+      "tool_results": [],
+      "feedback": null,
+      "llm_override": null,
+      "time_in_call_secs": 68,
+      "conversation_turn_metrics": null,
+      "rag_retrieval_info": null,
+      "llm_usage": null,
+      "interrupted": false,
+      "original_message": null,
+      "source_medium": null,
+      "source_event_id": 276,
+      "file_input": null
+    }
+  ]
+}

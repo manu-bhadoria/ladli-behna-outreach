@@ -3,6 +3,8 @@
 import { useEffect, useState, use } from "react";
 import Link from "next/link";
 
+export const runtime = 'edge';
+
 type Turn = {
   index: number;
   role: string;

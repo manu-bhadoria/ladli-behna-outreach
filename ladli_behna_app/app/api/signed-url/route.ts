@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+export const runtime = 'edge';
+
 // Returns a short-lived WebRTC conversation token for the ElevenLabs ConvAI
 // agent. The API key stays on the server — the browser never sees it.
 

@@ -91,7 +91,7 @@ export async function listConversations(pageSize = 50): Promise<ConversationSumm
   const { apiKey, agentId } = await getAuth();
   const res = await fetch(
     `${EL_BASE}/v1/convai/conversations?agent_id=${agentId}&page_size=${pageSize}`,
-    { headers: { "xi-api-key": apiKey }, cache: "no-store" }
+    { headers: { "xi-api-key": apiKey } }
   );
   if (!res.ok) throw new Error(`list failed: ${res.status}`);
   const j = await res.json();
@@ -102,7 +102,6 @@ export async function getConversation(id: string): Promise<ConversationDetail> {
   const { apiKey } = await getAuth();
   const res = await fetch(`${EL_BASE}/v1/convai/conversations/${id}`, {
     headers: { "xi-api-key": apiKey },
-    cache: "no-store",
   });
   if (!res.ok) throw new Error(`detail failed: ${res.status}`);
   return res.json();

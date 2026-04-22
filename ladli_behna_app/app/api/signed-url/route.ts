@@ -42,7 +42,8 @@ export async function GET() {
   try {
     const res = await fetch(
       `https://api.elevenlabs.io/v1/convai/conversation/token?agent_id=${agentId}`,
-      { headers: { "xi-api-key": apiKey }, cache: "no-store" }
+      // CF Workers doesn't implement the fetch 'cache' field; omit it.
+      { headers: { "xi-api-key": apiKey } }
     );
 
     if (!res.ok) {

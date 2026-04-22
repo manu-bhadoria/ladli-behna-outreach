@@ -153,3 +153,8 @@ Every successful `update_agent.py` run appends one entry below with timestamp, m
 - patches: _(none)_
 - pre-snapshot: `prompt_versions/2026-04-22T104208Z_snapshot-only.md`
 - post-snapshot: _(none)_
+
+### 2026-04-22T10:46:22Z · full PATCH
+- patches: `prompt+first_message+max_tokens+llm`, `turn_config`, `tts_config`, `knowledge_base+rag`
+- pre-snapshot: `prompt_versions/2026-04-22T104604Z_pre-update.md`
+- post-snapshot: `prompt_versions/2026-04-22T104616Z_post-update.md`

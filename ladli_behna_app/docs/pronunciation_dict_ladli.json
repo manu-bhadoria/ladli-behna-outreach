@@ -1,0 +1,22 @@
+{
+  "dictionary_id": "LHXBo1zDDZQ0QAVmklo1",
+  "version_id": "8ZPwDmTLTKBqMQwwUAMH",
+  "name": "ladli-behna-laadli-fix-v1",
+  "agent_id": "agent_9901kpt6a6xqf3gaahtr44ycvqgc",
+  "created_response": {
+    "id": "LHXBo1zDDZQ0QAVmklo1",
+    "name": "ladli-behna-laadli-fix-v1",
+    "created_by": "2kIkueGYc6dg19eyDwUztSKlfOk1",
+    "creation_time_unix": 1776856156111,
+    "version_id": "8ZPwDmTLTKBqMQwwUAMH",
+    "version_rules_num": 10,
+    "description": "Hindi retroflex flap fix for laadli/लाड़ली (core term in Ladli Behna agent).",
+    "permission_on_resource": "admin"
+  },
+  "live_locators": [
+    {
+      "pronunciation_dictionary_id": "LHXBo1zDDZQ0QAVmklo1",
+      "version_id": "8ZPwDmTLTKBqMQwwUAMH"
+    }
+  ]
+}
